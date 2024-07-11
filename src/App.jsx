@@ -15,6 +15,7 @@ function App() {
       <Navbar
         items={[
           { name: "Home", link: "/" },
+          { name: "About", link: "/about" },
           { name: "More", link: "/not-found" },
         ]}
       />
@@ -30,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/item" element={<ItemsDetailPage />} />
+            <Route path="/rentals/:rentalID" element={<ItemsDetailPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>

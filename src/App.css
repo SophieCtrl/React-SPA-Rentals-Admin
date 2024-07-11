@@ -9,15 +9,14 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
   position: relative;
   left: 20vw;
   top: 8vh;
   bottom: 8vh;
-  width: 70vw;
-  padding: 0 5vw;
+  width: 76vw;
+  padding: 2vh 2vw 15vh 2vw;
 }
 
 footer,
@@ -76,4 +75,28 @@ footer {
 
 .active {
   color: black;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1vw;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1vw;
+  width: 20vw;
+}
+
+.card img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 5px;
 }
