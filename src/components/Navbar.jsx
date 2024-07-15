@@ -1,19 +1,26 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navbar(props) {
+export default function Navbar({ onShowAll }) {
+  const handleShowAll = () => {
+    onShowAll();
+  };
+
   return (
-    <nav>
+    <nav className="navbar">
       <ul>
-        {props.items.map((item, index) => (
-          <li key={index + item.name}>
-            <NavLink key={index + item.name} to={item.link} alt={item.name}>
-              {item.name}
-            </NavLink>
-          </li>
-        ))}
+        <li>
+          <NavLink to="/" onClick={handleShowAll}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/not-found">More</NavLink>
+        </li>
       </ul>
     </nav>
   );
 }
-
-export default Navbar;

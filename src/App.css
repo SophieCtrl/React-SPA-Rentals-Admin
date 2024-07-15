@@ -1,6 +1,7 @@
 #root {
   background-color: white;
-  color: #092519;
+  color: black;
+  width: 100vw;
 }
 
 .layout {
@@ -24,10 +25,14 @@ nav {
   display: flex;
   position: fixed;
   width: 100vw;
-  background-color: #b4e6c6;
-  color: #12422c;
   height: 8vh;
   z-index: 10;
+}
+
+nav {
+  background-color: white;
+  border-bottom: 1px solid #e3e3e3;
+  font-weight: bold;
 }
 
 nav ul,
@@ -53,6 +58,8 @@ footer {
   align-items: center;
   gap: 5vw;
   padding: 0 5vw;
+  background-color: white;
+  border-top: 1px solid #e3e3e3;
 }
 
 .sidebar {
@@ -63,8 +70,9 @@ footer {
   height: 95vh;
   display: flex;
   flex-direction: column;
-  background-color: #b4e6c6;
+  background-color: white;
   padding: 5vh 0;
+  font-weight: bold;
 }
 
 .sidebar ul {
@@ -73,8 +81,12 @@ footer {
   gap: 5vh;
 }
 
+.pad-top {
+  padding-top: 1vh;
+}
+
 .active {
-  color: black;
+  color: palevioletred;
 }
 
 .cards-container {
@@ -87,16 +99,34 @@ footer {
 
 .card {
   display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 1vw;
-  width: 20vw;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2vh 1vw;
+  width: 22vw;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card a {
+  font-weight: 500;
+}
+
+.list-text {
+  color: #686868;
+  font-weight: normal;
 }
 
 .card img {
-  width: 20vw;
-  height: 20vw;
+  width: 22vw;
+  height: 22vw;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-bottom: 1.5vh;
+}
+
+.like-btn {
+  margin: 1vh 0;
 }

@@ -1,17 +1,25 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-function Sidebar(props) {
+export default function Sidebar({ likedCount, onShowFavorites, onShowAll }) {
+  const handleShowAll = () => {
+    onShowAll();
+  };
+
   return (
     <div className="sidebar">
       <ul>
-        {props.items.map((item, index) => (
-          <Link key={index + item.name} to={item.link} alt={item.name}>
-            {item.name}
+        <li>
+          <Link to="/" onClick={onShowFavorites}>
+            {likedCount} Favorites
           </Link>
-        ))}
+        </li>
+        <li>
+          <Link to="/" onClick={handleShowAll}>
+            Show All
+          </Link>
+        </li>
       </ul>
     </div>
   );
 }
-
-export default Sidebar;
