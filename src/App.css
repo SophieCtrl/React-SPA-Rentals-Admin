@@ -86,7 +86,7 @@ footer {
 }
 
 .active {
-  color: palevioletred;
+  color: #db4a2b;
 }
 
 .cards-container {
@@ -129,4 +129,21 @@ footer {
 
 .like-btn {
   margin: 1vh 0;
+}
+
+.rental-details img {
+  width: 76vw;
+}
+
+.logo {
+  width: 120px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: grey;
 }

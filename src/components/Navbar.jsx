@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Navbar({ onShowAll }) {
   const handleShowAll = () => {
@@ -11,7 +12,7 @@ export default function Navbar({ onShowAll }) {
       <ul>
         <li>
           <NavLink to="/" onClick={handleShowAll}>
-            Home
+            <img className="logo" src={logo} alt="rentHub Logo" />
           </NavLink>
         </li>
         <li>

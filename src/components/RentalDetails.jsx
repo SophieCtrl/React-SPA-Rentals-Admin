@@ -5,7 +5,7 @@ export default function RentalDetails({ rentalID }) {
   console.log(rental);
   return (
     <div className="rental-details">
-      <img src={rental.picture_url.filename} alt={rental.name} />
+      <img src={"../" + rental.picture_url} alt={rental.name} />
       <h3>{rental.name}</h3>
       <p>
         {rental.property_type} in {rental.city}, {rental.country}
@@ -33,9 +33,6 @@ export default function RentalDetails({ rentalID }) {
       </p>
       <p>{rental.description}</p>
       <p>Space: {rental.space}</p>
-      <button onClick={() => clickToDelete(rental.id)} className="btn-delete">
-        Delete
-      </button>
     </div>
   );
 }
